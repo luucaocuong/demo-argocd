@@ -6,12 +6,14 @@ nameSuffix: -dev
 patches:
   - target:
       kind: Deployment
-      name: nginx
+      name: demo-app
     patch: |
       - op: replace
         path: /spec/replicas
         value: 1
 
+namespace: dev
+
 images:
-  - name: docker.io/library/nginx
-    newTag: "1.25"
+  - name: nrt.ocir.io/nrwx2gwvn1zf/demo-app
+    newTag: "v1.0.0"          # ← update this for each release
