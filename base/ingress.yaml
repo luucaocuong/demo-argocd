@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx
+  name: demo-app
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: nginx        # base name, kustomize will apply nameSuffix automatically
+                name: demo-app     # matches base service name, kustomize adds -dev suffix
                 port:
                   number: 80
