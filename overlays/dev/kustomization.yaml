@@ -14,4 +14,4 @@ patches:
 
 images:
   - name: nginx
-    newTag: stable
+    newTag: "1.25"
