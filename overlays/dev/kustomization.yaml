@@ -13,5 +13,5 @@ patches:
         value: 1
 
 images:
-  - name: nginx
+  - name: docker.io/library/nginx
     newTag: "1.25"
